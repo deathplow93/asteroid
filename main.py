@@ -22,12 +22,11 @@ def main():
                 keep_game_running = False
                 return print("Game has Quit")
 
-            player.update(dt)
-            screen.fill("black")
-
-            player.draw(screen)
-            pygame.display.flip()
-            dt = clock.tick(60) / 1000
+        player.update(dt)
+        screen.fill("black")
+        player.draw(screen)
+        pygame.display.flip()
+        dt = clock.tick(60) / 1000
 
 
 if __name__ == "__main__":
