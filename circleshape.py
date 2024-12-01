@@ -24,16 +24,9 @@ class CircleShape(pygame.sprite.Sprite):
 
     def collision_detection(self, vector_2):
         dist = self.position.distance_to(vector_2.position)
-        combined_radius = (self.radius - 13) + vector_2.radius
-        # combined_radius_sub = (self.radius - 1) + vector_2.radius
-
-        # print(f"dist:{dist}")
-        # print(f"combined :{combined_radius}")
-        # print(f"combined sub:{combined_radius_sub}")
+        combined_radius = (self.radius) + vector_2.radius
 
         if dist <= combined_radius:
-            # print("get hit bitch")
             return True
         else:
-            # print("did not git hit bitch")
             return False

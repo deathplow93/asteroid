@@ -20,3 +20,4 @@ class Shot(CircleShape):
 
     def update(self, dt):
         self.position += self.velocity * dt
+        # print(f"Shot moved to position: {self.position}")
