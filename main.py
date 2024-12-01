@@ -46,7 +46,7 @@ def main():
             obj.draw(screen)
 
         for obj in asteroids:
-            if obj.collision_detection(player.position) == True:
+            if obj.collision_detection(player) == True:
                 print("game over")
                 keep_game_running = False
 
