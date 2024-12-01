@@ -24,7 +24,7 @@ def main():
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
     player = Player(x, y)
-    asteroid_field = AsteroidField()
+    AsteroidField()
     keep_game_running = True
     print("Starting asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
@@ -51,8 +51,7 @@ def main():
             for bullet in shots:
                 # print(f"Bullet position: {bullet.position}")
                 if obj.collision_detection(bullet) == True:
-                    print("kill")
-                    obj.kill()
+                    obj.split()
                     bullet.kill()
 
         for obj in asteroids:
